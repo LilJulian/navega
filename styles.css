@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --verdeClaro: #A9DEA6;
+  --verdeOscuro: #10610C;
+  --verdeTitulo: #387C0E;
+  --textoBlanco: white; 
+  --texto2kd: "K2D", sans-serif;
+  --verdePlaceholder: #E2FFD8;
+}
+
+
+.encabezado{
+  background-color: var(--verdeClaro);
+  width: 100%;
+  height: 10vw;
+  border-bottom-left-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding : 0vw 19vw 0vw 10vw;
+  margin-bottom: 5vw;
+  justify-content: space-between;
+  
+}
+
+.imagenLogo{
+  padding-top: 0.9vw;
+  position: absolute;
+  width: 18vw;
+}
+
+.tipoUsuario{
+  width: 16vw;
+  height: 3vw;
+  margin-top: 4vw;
+  border: none;
+  background-color: transparent;
+  font-size: 2.4vw;
+  font-family: var(--texto2kd);
+  color: var(--verdeOscuro);
+  font-weight: bold;
+  appearance: none;
+  position: relative;
+}
+
+/* .encabezado__usuario::after {
+  content: "▼";
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8vw;
+  color:var(--verdeOscuro);
+} */
+
+.contenedorFormulario{
+  background-color: var(--verdeClaro);
+  width: 28vw;
+  height: 30vw;
+  margin: 0 auto;
+  border-radius: 2vw;
+}
+
+.tituloFormulario{
+  background-color: var(--verdeOscuro);
+  width: 100%;
+  height: 7vw;
+  border-radius: 2vw 2vw 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario__titulo{
+
+  font-size: 2.5vw;
+
+}
+
+.formulario{
+  width: 100%;
+  height: 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario__input{
+  width: 60%;
+  height: 3.1vw;
+  margin-bottom: 3vw;
+  background-color: var(--verdePlaceholder);
+  font-family: var(--texto2kd);
+  color: var(--verdeClaro);
+  padding-left: 1.4vw;
+}
+
+.formulario__button{
+  width: 11vw;
+  height: 2.5vw;
+  background-color: var(--verdeOscuro);
+  margin-bottom: 0.8vw;
+}
+
+.formulario__input ,.formulario__button{
+  border-radius: 1vw;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.formulario__titulo, .formulario__button , .formulario__linkRegistro{
+  color: var(--textoBlanco);
+  font-family: var(--texto2kd);
+    text-decoration: none;
+}
+
+.formulario__button:hover{
+  color: var(--verdeOscuro);
+  background-color: var(--textoBlanco);
+}
+
+.formulario__linkRegistro :hover{
+  color: black;
+}
