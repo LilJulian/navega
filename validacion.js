@@ -4,28 +4,15 @@ const contraseña = document.querySelector('[name="password"]');
 const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
 const validar = (event) => {
-  event.preventDefault();
+  // event.preventDefault();
 
-  if (nombreUsuario.value == "") {
-    if (nombreUsuario.previousElementSibling != null) {
-      nombreUsuario.previousElementSibling.remove();
-    }
-    console.log(nombreUsuario.previousElementSibling);
-    
-    const span = document.createElement('span');
-    span.textContent = "Este campo es obligatorio";
-    nombreUsuario.insertAdjacentElement("beforebegin", span);
+  if (nombreUsuario.value == "" || nombreUsuario.value.length < 3) {
+    alert("ingrese el campo correctamente");
   }
-
-  if (contraseña.value == "" || !regex(contraseña.value)) {
-    // if (contraseña.previousElementSibling != null) {
-    //   contraseña.previousElementSibling.remove();
-    // }
-    console.log(contraseña.previousSibling);
-    
-    const span = document.createElement("span");
-    span.textContent = "Rellene este campo correctamente";
-    contraseña.insertAdjacentElement("beforebegin", span);
+  
+  console.log(nombreUsuario.value.length);
+  if (contraseña.value == "" || !regex.test(contraseña.value)) {
+    alert("contraseña incorrecta")
   }
 }
 
