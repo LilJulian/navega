@@ -1,5 +1,10 @@
 @import url('./login.css');
 
+.cuerpoVistaCliente{
+  display: flex;
+  flex-direction: column;
+}
+
 .encabezado__menu{
   position: absolute;
   top: 42%;
@@ -7,23 +12,48 @@
   display: flex;
   flex-direction: row;
   gap: 2vw;
-  font-size: 1.4vw;
+  /* font-size: 1.4vw; */
   
 }
 
 .item__menu{
+  color: var(--verdeOscuro);
   text-decoration: none;
-  color: var(--verdeTitulo);
-  font-size: 1.6vw;
+  font-size: 1.4vw;
 }
 
 .item__menu:hover{
+  color: rgb(2, 48, 2);
   font-size: 2vw;
-  color: black;
+  
 }
 
 .linea__menu{
   width: 0.2vw;
   border: none;
   background-color: black;
+}
+
+.opcionesViaje{
+  width: 65vw;
+  height: 17vw;
+  background-color: var(--verdeOscuro);
+  margin: auto ;
+  border-radius: 2vw;
+  display: grid;
+  grid-template-rows:  100px, 80px;
+  grid-template-areas: 'idaVuelta'
+                       'destinos';
+                       ;
+}
+
+.idaVuelta{
+  grid-area: 'idaVuelta';
+  background-color: var(--verdeClaro);
+  border-radius: 2vw 2vw 0 0;
+  /* padding: 2vw; */
+}
+
+.destinos{
+  grid-area: 'destinos';
 }
