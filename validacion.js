@@ -4,16 +4,23 @@ const contraseña = document.querySelector('[name="password"]');
 const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
 
 const validar = (event) => {
-  // event.preventDefault();
+  event.preventDefault();
 
+  let pasa = true;
   if (nombreUsuario.value == "" || nombreUsuario.value.length < 3) {
     alert("ingrese el campo correctamente");
+    pasa = false;
   }
-  
-  console.log(nombreUsuario.value.length);
-  if (contraseña.value == "" || !regex.test(contraseña.value)) {
-    alert("contraseña incorrecta")
+  // if (contraseña.value == "" || !regex.test(contraseña.value)) {
+  //   alert("contraseña incorrecta")
+  // }
+  if (pasa == true) {
+    formulario.submit();
   }
 }
+
+const queryString = window.location.search;
+const params = queryString.slice(1);
+
 
 formulario.addEventListener('submit', validar);

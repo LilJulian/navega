@@ -12,8 +12,14 @@
 }
 
 .item__menu{
-  color: black;
   text-decoration: none;
+  color: var(--verdeTitulo);
+  font-size: 1.6vw;
+}
+
+.item__menu:hover{
+  font-size: 2vw;
+  color: black;
 }
 
 .linea__menu{
