@@ -24,7 +24,7 @@
 
 .item__menu:hover{
   color: rgb(2, 48, 2);
-  font-size: 2vw;
+  font-size: 1.9vw;
   
 }
 
@@ -36,24 +36,42 @@
 
 .opcionesViaje{
   width: 65vw;
-  height: 17vw;
+  height: 15vw;
   background-color: var(--verdeOscuro);
   margin: auto ;
   border-radius: 2vw;
   display: grid;
-  grid-template-rows:  100px, 80px;
+  grid-template-rows: 6vw 1fr;
   grid-template-areas: 'idaVuelta'
                        'destinos';
                        ;
+
 }
 
 .idaVuelta{
   grid-area: 'idaVuelta';
   background-color: var(--verdeClaro);
   border-radius: 2vw 2vw 0 0;
-  /* padding: 2vw; */
+  display: flex;
+  flex-direction: row;
+  /* gap: 2vw; */
+
+}
+
+.idaVuelta__input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .destinos{
   grid-area: 'destinos';
 }
+
+.linea__ida{
+  width: 0.2vw;
+  border: none;
+  background-color: black;
+  height: 2vw;
+}
+

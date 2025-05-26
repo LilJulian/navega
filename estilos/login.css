@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--texto2kd);
+  
+}
+
+body{
+  /* background-color: black; */
 }
 
 :root{
@@ -14,6 +19,7 @@
   --textoBlanco: white; 
   --texto2kd: "K2D", sans-serif;
   --verdePlaceholder: #E2FFD8;
+  --colorCremita:  #FFF1EA;
 }
 
 
@@ -55,20 +61,13 @@
   cursor: pointer;
 }
 
-/* .encabezado__usuario::after {
-  content: "▼";
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.8vw;
-  color:var(--verdeOscuro);
-} */
-
 .contenedorFormulario{
   background-color: var(--verdeClaro);
   width: 28vw;
   height: 30vw;
   margin: 0 auto;
   border-radius: 2vw;
+  box-shadow: 10px 10px 10px rgb(152, 152, 152);
 }
 
 .tituloFormulario{
