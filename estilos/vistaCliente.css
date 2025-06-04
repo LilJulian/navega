@@ -54,7 +54,9 @@
   border-radius: 2vw 2vw 0 0;
   display: flex;
   flex-direction: row;
-  /* gap: 2vw; */
+  gap: 2vw;
+  align-items: center;
+  font-size: 2vw;
 
 }
 
@@ -62,6 +64,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .destinos{
@@ -73,5 +76,37 @@
   border: none;
   background-color: black;
   height: 2vw;
+}
+
+.chequeoIdaVuelta{
+  /* margin:0  1.3vw 0 1.3vw;
+  width: 1.2vw; */
+}
+
+
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"] + label:before{
+  content: "";
+  margin:0.6vw  1.3vw 0 1.3vw;
+  width: 1.2vw;
+  height: 1.2vw;
+  float: left;
+	border: 0.2vw solid black;
+	background: var(--verdeClaro);
+}
+
+input[type="checkbox"]:checked + label:after{
+  content: "";
+  width: 1vw;
+  height: 0.5vw;
+  border: 4px solid #0fbf12;
+  float: left;
+  margin-left: -2.7vw;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 0.9vw;
+  transform: rotate(-55deg);
 }
 

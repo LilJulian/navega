@@ -27,16 +27,27 @@
     <form class="opcionesViaje" method="get" novalidate>
       <div class="idaVuelta">  
         <div class="idaVuelta__input">
-          <input type="checkbox" name="1" id="soloIda">
+          <input class="chequeoIdaVuelta" type="checkbox" name="1" id="soloIda">
           <label for="soloIda">Solo ida</label>
         </div>
         <hr class="linea__ida">
         <div class="idaVuelta__input">
-          <input type="checkbox" name="2" id="vuelta">
+          <input class="chequeoIdaVuelta" type="checkbox" name="2" id="vuelta">
           <label for="vuelta">Ida y vuelta</label>
         </div>
       </div>
-      <div class="destinos"></div>
+      <div class="destinos">
+        <div class="origenDestino"><form action="get">
+          <div class="origen">
+          </div>
+          <div class="destino">
+            <select name="" id="">
+              <option value="">bga</option>
+              <option value="">mde</option>
+            </select>            
+          </div>
+        </form></div>
+      </div>
     </form>
   </section>
 </body>
