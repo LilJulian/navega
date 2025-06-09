@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.viaje{
+  margin-bottom: 5vw;
+}
+
 .encabezado__menu{
   position: absolute;
   top: 42%;
@@ -31,7 +35,7 @@
 .linea__menu{
   width: 0.2vw;
   border: none;
-  background-color: black;
+  background-color: var(--negroLetra);
 }
 
 .opcionesViaje{
@@ -74,14 +78,14 @@
 .linea__ida{
   width: 0.2vw;
   border: none;
-  background-color: black;
+  background-color: var(--negroLetra);
   height: 2vw;
 }
 
-.chequeoIdaVuelta{
-  /* margin:0  1.3vw 0 1.3vw;
-  width: 1.2vw; */
-}
+/* .chequeoIdaVuelta{
+  margin:0  1.3vw 0 1.3vw;
+  width: 1.2vw;
+} */
 
 
 input[type="checkbox"]{
@@ -110,3 +114,195 @@ input[type="checkbox"]:checked + label:after{
   transform: rotate(-55deg);
 }
 
+
+.destinos{
+  padding: 1.3vw;
+  align-content: center;
+  display: flex;
+  gap: 1vw;
+}
+.origenDestino{
+  color: var(--negroLetra);
+  /* justify-content: space-evenly; */
+  padding: 1.8vw 0;
+  
+}
+
+.contenedor__viaje{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  width: 30%;
+  background-color: var(--verdeClaro);
+  border-radius: 1.2vw;
+  border: solid 0.3vw var(--verdeBorde);
+}
+
+.origenDestino__button, .idaVueltaCalendario__button, .seleccionPersonas__button, .buscarViajes__button{
+  border: none;
+  background-color: transparent;
+  font-size: 1.7vw;
+  font-weight: bold;
+  align-self: center;
+}
+
+.origenDestino__separador{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+  align-items: center;
+}
+
+.bx-swap-horizontal{
+  font-size: 2vw;
+}
+
+.origenDestino__linea{
+  border: none;
+  background-color: var(--verdeBorde); 
+  height: 2vw;
+  transform: rotate(90deg);
+  height: 0.2vw;
+  width: 0.5vw;
+}
+
+.idaVueltaCalendario{
+  position: relative;
+  justify-content: start;
+  gap: 3vw;
+  padding-left: 1vw;
+  
+}
+
+.idaVueltaCalendario__linea{
+  border: none;
+  background-color: var(--verdeBorde); 
+  height: 2vw;
+  transform: rotate(90deg);
+  height: 0.3vw;
+}
+
+
+.bx-calendar-alt{
+  color: var(--verdeOscuro);
+  font-size: 2.4vw;
+  position: absolute;
+  margin-left: 1vw;
+  
+}
+
+.seleccionPersonas{
+  width: 13vw;
+  padding-left: 1vw;
+  justify-content: start;
+}
+
+.bx-user-plus{
+  font-size: 2vw;
+  color: var(--verdeOscuro);
+}
+
+.seleccionPersonas__button{
+  display: flex;
+  gap: 2vw;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.bx-chevron-down{
+
+  font-size: 2.7vw;
+}
+
+
+.buscarViajes{
+  border-radius: 5vw;
+  font-size: 2vw;
+  width: 8vw;
+  background-color: black;
+  
+}
+
+.buscarViajes__button{
+  color: aliceblue;
+}
+
+
+.complementos{
+  width: 100%;
+  height: 40vw;
+  display: grid;
+  grid-template-rows: 6vw 1fr;
+  grid-template-columns: 1fr;
+  padding: 2vw;
+  text-align: center;
+}
+
+.tituloTravesiaCom{
+  font-size: 3vw;
+}
+
+.complementos__info{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas: 'hospedaje' 'vehiculos' 'tour';
+  gap: 2vw;
+}
+
+.hospedaje{
+  grid-area: 'hospedaje';
+}
+
+.vehiculos{
+  grid-area: 'vehiculos';
+}
+
+.tour{
+  grid-area: 'tour';
+}
+
+.complementos__contenedor{
+  display: flex;
+  background-color: var(--verdeClaro);
+  flex-direction: column;
+  border-radius: 2vw;
+  margin-top: 2vw;
+}
+
+.complementoTitulo{
+  padding: 1vw;
+  height: 30%;
+  width: 100%;
+  background-color: var(--verdeOscuro);
+  color: white;
+  font-size: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 3vw;
+  border-radius: 2vw 2vw 0 0;
+}
+
+.complementos__imagen{
+  width: 29vw;
+  height: 10vw;
+}
+
+.complementoImagen__contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.6vw;
+}
+
+.complementoLink__texto{
+  text-decoration: none;
+  color: var(--negroLetra);
+}
+
+.idaVuelta__input, .origenDestino, .idaVueltaCalendario, .seleccionPersonas__button, .buscarViajes  :hover{
+  cursor: pointer;
+}

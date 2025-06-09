@@ -6,7 +6,7 @@
   <title> Explora</title>
   <link rel="fash icon" href="./images/logoExplora.png">
   <link rel="stylesheet" href="../estilos/vistaCliente.css">
-  
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="cuerpoVistaCliente">
   <section class="encabezado">
@@ -25,7 +25,7 @@
   </section>
   <section class="viaje">
     <form class="opcionesViaje" method="get" novalidate>
-      <div class="idaVuelta">  
+      <div class="idaVuelta">
         <div class="idaVuelta__input">
           <input class="chequeoIdaVuelta" type="checkbox" name="1" id="soloIda">
           <label for="soloIda">Solo ida</label>
@@ -37,18 +37,72 @@
         </div>
       </div>
       <div class="destinos">
-        <div class="origenDestino"><form action="get">
+        <div class="origenDestino contenedor__viaje">
           <div class="origen">
+            <button class="origenDestino__button">Origen</button>
+          </div>
+          <div class="origenDestino__separador">
+            <hr class="origenDestino__linea">
+            <i class='bx bx-swap-horizontal'></i> 
+            <hr class="origenDestino__linea">
           </div>
           <div class="destino">
-            <select name="" id="">
-              <option value="">bga</option>
-              <option value="">mde</option>
-            </select>            
+            <button class="origenDestino__button">Destino</button>
           </div>
-        </form></div>
+      </div>
+      <div class="idaVueltaCalendario contenedor__viaje">
+        <button class="idaVueltaCalendario__button idaVueltaCalendario__button--vuelta">Ida <i class='bx  bx-calendar-alt'  ></i> </button>
+        <hr class="idaVueltaCalendario__linea">
+        <button class="idaVueltaCalendario__button idaVueltaCalendario__button--ida">Vuelta <i class='bx  bx-calendar-alt'  ></i> </button>
+      </div>
+      <div class="seleccionPersonas contenedor__viaje">
+        <button class="seleccionPersonas__button"><i class='bx  bx-user-plus'  ></i>
+          1 <i class='bx  bx-chevron-down'  ></i> 
+       </button>
+      </div>
+      <div class="buscarViajes contenedor__viaje">
+        <button class="buscarViajes__button">Buscar</button>
+      </div>
       </div>
     </form>
+  </section>
+  <section class="complementos">
+    <h1 class="tituloTravesiaCom">Compementa tu travesia</h1>
+    <div class="complementos__info">
+      <div class="hospedaje complementos__contenedor">
+        <div class="complementoTitulo">
+          <p>HOSPEDAJE</p>
+        </div>
+        <div class="complementoImagen__contenedor">
+          <img src="./images/hotel.svg" alt="" class="complementos__imagen">
+        </div>
+        <div class="complementoLink">
+          <a class="complementoLink__texto" href="#">Click aqui para encontrar hoteles: <u>www.hotel.co</u></a>
+        </div>
+      </div>
+      <div class="vehiculos complementos__contenedor">
+        <div class="complementoTitulo">
+          <p>ALQUILER DE VEHICULOS</p>
+        </div>
+        <div class="complementoImagen__contenedor">
+          <img src="./images/carro.svg" alt="" class="complementos__imagen">
+        </div>
+        <div class="complementoLink">
+          <a class="complementoLink__texto" href="#">Click aqui para encontrar autos: <u>www.autos.co</u></a>
+        </div>
+      </div>
+      <div class="tour complementos__contenedor">
+        <div class="complementoTitulo">
+          <p>TOURS</p>
+        </div>
+        <div class="complementoImagen__contenedor">
+          <img src="./images/puente.svg" alt="" class="complementos__imagen">
+        </div>
+        <div class="complementoLink">
+          <a class="complementoLink__texto" href="#">Click aqui para encontrar tours: <u>www.tours.co</u></a>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 </html>

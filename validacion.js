@@ -13,14 +13,12 @@ const validar = (event) => {
   }
   // if (contraseña.value == "" || !regex.test(contraseña.value)) {
   //   alert("contraseña incorrecta")
+  //   pasa = false;
   // }
   if (pasa == true) {
     formulario.submit();
   }
 }
-
-const queryString = window.location.search;
-const params = queryString.slice(1);
 
 
 formulario.addEventListener('submit', validar);
