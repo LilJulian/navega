@@ -6,6 +6,7 @@
     <title>Login-Navega</title>
     <link rel="stylesheet" href="../estilos/login.css">
     <link rel="fash icon" href="../images/logoExplora.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body class="cuerpo">
     <section class="encabezado">
@@ -26,12 +27,12 @@
       </div>
       <div class="ingresoFormulario">
         <form action="../vistaCliente.html" method="get" class="formulario" novalidate> 
-          <input type="text" class="formulario__input" placeholder="USUARIO" name="username" required>
+          <input type="text" class="formulario__input" placeholder="CORREO" name="username" required>
           <input type="password" class="formulario__input" placeholder="CONTRASEÑA" name="password" required>
           <button class="formulario__button" type="submit" id="btn_enviar">ENVIAR</button>
           <a href="registro.html" class="formulario__linkRegistro">Si no está registrado, <u>ingrese aquí</u></a>
         </form>
-        <script src="../validacion.js"></script>
+        <script src="../inicio.js"></script>
       </div>
     </section>
   </body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista SuperAdmin - Gestión de Administradores</title>
+  <link rel="stylesheet" href="/estilos/superAdmin.css">
+</head>
+<body class="superadmin">
+
+  <header class="superadmin__header">
+    <h1 class="superadmin__titulo">Gestión de Administradores</h1>
+  </header>
+
+  <main class="superadmin__main">
+
+    <!-- Bloque: formulario -->
+    <section class="formulario-admin">
+      <h2 class="formulario-admin__titulo">Crear nuevo administrador</h2>
+      <form id="formCrearAdmin" class="formulario-admin__form">
+        <input type="text" id="nombre" class="formulario-admin__input" placeholder="Nombre completo" required>
+        <input type="email" id="correo" class="formulario-admin__input" placeholder="Correo electrónico" required>
+        <input type="password" id="contrasena" class="formulario-admin__input" placeholder="Contraseña" required>
+        <input type="text" id="telefono" class="formulario-admin__input" placeholder="Teléfono (opcional)">
+        <input type="text" id="direccion" class="formulario-admin__input" placeholder="Dirección (opcional)">
+        <button type="submit" class="formulario-admin__boton">Crear administrador</button>
+      </form>
+    </section>
+
+    <!-- Bloque: tabla -->
+    <section class="tabla-admins">
+      <h2 class="tabla-admins__titulo">Lista de administradores</h2>
+      <table class="tabla-admins__tabla">
+        <thead class="tabla-admins__encabezado">
+          <tr class="tabla-admins__fila">
+            <th class="tabla-admins__columna">ID</th>
+            <th class="tabla-admins__columna">Nombre</th>
+            <th class="tabla-admins__columna">Correo</th>
+            <th class="tabla-admins__columna">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaAdmins" class="tabla-admins__cuerpo">
+          <!-- Aquí se insertan las filas con JS -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="superAdmin.js"></script>
+</body>
+</html>

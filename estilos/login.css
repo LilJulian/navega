@@ -125,6 +125,10 @@ body{
     text-decoration: none;
 }
 
+.formulario__linkRegistro{
+  font-size: 1vw;
+}
+
 .formulario__button:hover{
   color: var(--verdeOscuro);
   background-color: var(--textoBlanco);

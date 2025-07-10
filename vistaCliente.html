@@ -7,6 +7,8 @@
   <link rel="fash icon" href="./images/logoExplora.png">
   <link rel="stylesheet" href="../estilos/vistaCliente.css">
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body class="cuerpoVistaCliente">
   <section class="encabezado">
@@ -50,21 +52,31 @@
             <button class="origenDestino__button">Destino</button>
           </div>
       </div>
-      <div class="idaVueltaCalendario contenedor__viaje">
-        <button class="idaVueltaCalendario__button idaVueltaCalendario__button--vuelta">Ida <i class='bx  bx-calendar-alt'  ></i> </button>
-        <hr class="idaVueltaCalendario__linea">
-        <button class="idaVueltaCalendario__button idaVueltaCalendario__button--ida">Vuelta <i class='bx  bx-calendar-alt'  ></i> </button>
-      </div>
-      <div class="seleccionPersonas contenedor__viaje">
-        <button class="seleccionPersonas__button"><i class='bx  bx-user-plus'  ></i>
-          1 <i class='bx  bx-chevron-down'  ></i> 
-       </button>
-      </div>
+<div class="idaVueltaCalendario contenedor__viaje">
+  <input type="text" id="fecha_ida" placeholder="Ida" required class="input__calendario">
+  <hr class="idaVueltaCalendario__linea">
+<input type="text" id="fecha_vuelta" placeholder="Vuelta" class="input__calendario">
+</div>
+ 
+<div class="seleccionPersonas contenedor__viaje">
+  <button class="seleccionPersonas__button" id="btnTogglePersonas">
+    <i class='bx bx-user-plus'></i>
+    <span id="cantidadPersonas">1</span>
+    <i class='bx bx-chevron-down'></i>
+  </button>
+
+  <div class="seleccionPersonas__dropdown" id="dropdownPersonas">
+    <button id="btnRestar">-</button>
+    <span id="contador">1</span>
+    <button id="btnSumar">+</button>
+  </div>
+</div>
       <div class="buscarViajes contenedor__viaje">
         <button class="buscarViajes__button">Buscar</button>
       </div>
       </div>
     </form>
+    <script src="reservas.js"></script>
   </section>
   <section class="complementos">
     <h1 class="tituloTravesiaCom">Compementa tu travesia</h1>

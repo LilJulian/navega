@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Ciudades</title>
+  <link rel="stylesheet" href="/estilos/ciudades.css">
+</head>
+<body class="ciudades">
+  <header class="ciudades__header">
+    <h1 class="ciudades__titulo">Gestión de Ciudades</h1>
+    <a href="/vistaAdmin.html" class="ciudades__volver">← Volver</a>
+  </header>
+
+  <section class="ciudades__formulario">
+    <h2 class="ciudades__subtitulo">Agregar Nueva Ciudad</h2>
+<form id="formCiudad" class="form-ciudad">
+  <div class="form-ciudad__grupo">
+    <label for="nombreCiudad" class="form-ciudad__label">Nombre Ciudad</label>
+    <input type="text" id="nombreCiudad" name="nombre_ciudad" required class="form-ciudad__input" />
+  </div>
+  <div class="form-ciudad__grupo">
+    <label for="pais" class="form-ciudad__label">País</label>
+    <input type="text" id="pais" name="pais" required class="form-ciudad__input" />
+  </div>
+  <div class="form-ciudad__grupo">
+    <label for="codigoPostal" class="form-ciudad__label">Código Postal</label>
+    <input type="text" id="codigoPostal" name="codigo_postal" class="form-ciudad__input" />
+  </div>
+  <button type="submit" class="form-ciudad__btn">Guardar Ciudad</button>
+</form>
+
+  </section>
+
+  <section class="ciudades__tabla">
+    <h2 class="ciudades__subtitulo">Lista de Ciudades</h2>
+    <table class="tabla-ciudades">
+      <thead class="tabla-ciudades__encabezado">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>País</th>
+          <th>Código Postal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCiudades" class="tabla-ciudades__cuerpo">
+        <!-- Aquí se insertarán las filas con JS -->
+      </tbody>
+    </table>
+  </section>
+  <script src="/ciudades.js"></script>
+</body>
+</html>

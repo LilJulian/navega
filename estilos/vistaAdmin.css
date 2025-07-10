@@ -1,0 +1,94 @@
+@import url('./login.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--verdePlaceholder);
+  color: var(--verdeTitulo);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verdeClaro);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.navbar__logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--verdeTitulo);
+}
+
+.navbar__logoImage{
+  width: 18vw;
+  height: 7vw;
+}
+
+.navbar__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar__btn {
+  
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.navbar__btn:hover {
+  background-color: var(--verdeOscuro);
+  color: var(--colorCremita);
+}
+
+.navbar__btn--logout, .navbar__btn {
+  color: var(--verdeTitulo);
+  font-size: 2vw;
+}
+
+/* DASHBOARD */
+.dashboard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.dashboard__titulo {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard__opciones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard__card {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.dashboard__card:hover {
+  background-color: var(--verdeClaro);
+  border-color: var(--verdeBorde);
+  transform: scale(1.05);
+}

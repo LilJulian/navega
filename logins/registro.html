@@ -20,21 +20,16 @@
       <h1 class="formulario__titulo">REGISTRO</h1>
     </div>
     <div class="ingresoFormulario">
-      <form action="index.html" method="get" class="formulario" novalidate> 
+      <form id="formRegistro" class="formulario" novalidate>
         <input type="text" class="formulario__input formulario__input--pequeño" placeholder="NOMBRE USUARIO" name="username" required>
         <input type="email" class="formulario__input formulario__input--pequeño" placeholder="CORREO" name="correo" required>
         <input type="number" class="formulario__input formulario__input--pequeño formulario__input--registro" placeholder="TELÉFONO" name="telefono" required>
-        <select name="usuario" id="usuario" class="tipoUsuario tipoUsuario--registro">
-          <option value="">SELECCIONE ▼</option>
-          <option value="cliente">Cliente</option>
-          <option value="admin">Administrador</option>
-        </select> 
         <input type="text" class="formulario__input formulario__input--pequeño" placeholder="DIRECCIÓN" name="direccion" required>
         <input type="password" class="formulario__input formulario__input--pequeño" placeholder="CONTRASEÑA" name="password" required>
         <button class="formulario__button" type="submit" id="btn_enviar btn_enviar--pequeño">ENVIAR</button>
         <a href="index.html" class="formulario__linkRegistro ">Ya esta registrado?, <u>ingrese aquí</u></a>
       </form>
-      <!-- <script src="validacion.js"></script> -->
+      <script src="../registro.js"></script>
     </div>
   </section>
 </body>

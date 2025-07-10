@@ -1,0 +1,129 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Estructura general ===== */
+body.superadmin {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 2rem;
+}
+
+.superadmin__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.superadmin__titulo {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* ===== Formulario de creación ===== */
+.formulario-admin {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.formulario-admin__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formulario-admin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-admin__input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-admin__input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #eef7ff;
+}
+
+.formulario-admin__boton {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.formulario-admin__boton:hover {
+  background-color: #27ae60;
+}
+
+/* ===== Tabla de administradores ===== */
+.tabla-admins {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.tabla-admins__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tabla-admins__tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-admins__encabezado {
+  background-color: #2980b9;
+  color: white;
+}
+
+.tabla-admins__columna {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.tabla-admins__fila:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-admins__fila:hover {
+  background-color: #f1f1f1;
+}
+
+.tabla-admins__cuerpo button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tabla-admins__cuerpo button:hover {
+  background-color: #c0392b;
+}

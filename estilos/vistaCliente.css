@@ -73,6 +73,9 @@
 
 .destinos{
   grid-area: 'destinos';
+  display: flex;
+  justify-content: center;
+  /* margin-top: 0.7vw; */
 }
 
 .linea__ida{
@@ -133,7 +136,7 @@ input[type="checkbox"]:checked + label:after{
   justify-content: space-around;
   align-items: center;
   height: 70%;
-  width: 30%;
+  width: 28%;
   background-color: var(--verdeClaro);
   border-radius: 1.2vw;
   border: solid 0.3vw var(--verdeBorde);
@@ -168,9 +171,9 @@ input[type="checkbox"]:checked + label:after{
 }
 
 .idaVueltaCalendario{
-  position: relative;
+  /* position: relative; */
   justify-content: start;
-  gap: 3vw;
+  gap: 0.4vw;
   padding-left: 1vw;
   
 }
@@ -192,23 +195,14 @@ input[type="checkbox"]:checked + label:after{
   
 }
 
-.seleccionPersonas{
-  width: 13vw;
-  padding-left: 1vw;
-  justify-content: start;
-}
+
 
 .bx-user-plus{
   font-size: 2vw;
   color: var(--verdeOscuro);
 }
 
-.seleccionPersonas__button{
-  display: flex;
-  gap: 2vw;
-  /* justify-content: center; */
-  align-items: center;
-}
+
 
 .bx-chevron-down{
 
@@ -306,3 +300,98 @@ input[type="checkbox"]:checked + label:after{
 .idaVuelta__input, .origenDestino, .idaVueltaCalendario, .seleccionPersonas__button, .buscarViajes  :hover{
   cursor: pointer;
 }
+
+#fecha_ida,
+#fecha_vuelta {
+  background-color: var(--verdeClaro);
+  border: 0.2vw solid var(--verdeBorde);
+  border-radius: 1vw;
+  font-size: 1.3vw;
+  font-family: 'Arial', sans-serif;
+  color: #073d07;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 7vw;
+  height: 3vw;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#fecha_ida:focus,
+#fecha_vuelta:focus {
+  box-shadow: 0 0 0.5vw 0.2vw #53a653;
+  background-color: #d0f5d0;
+}
+
+/* Estilo al calendario (popup de Flatpickr) */
+.flatpickr-calendar {
+  font-size: 1vw;
+  border-radius: 1vw;
+  background-color: #f6fff5;
+  border: 0.2vw solid var(--verdeBorde);
+}
+
+
+.idaVueltaCalendario input::placeholder {
+  color: black;
+  opacity: 1;          /* asegúrate que no se vea desvanecido */
+}
+
+.input__calendario{
+  padding-left: 0.5vw;
+}
+
+  .seleccionPersonas {
+    position: relative;
+    display: inline-block;
+    width: 12vw;
+  }
+
+  .seleccionPersonas__button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-weight: bold;
+    color: var(--verdeOscuro);
+  }
+
+  .seleccionPersonas__dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .seleccionPersonas__dropdown button {
+    background-color: var(--verdeBorde);
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    font-size: 18px;
+    margin: 0 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .seleccionPersonas__dropdown button:hover {
+    background-color: #388e3c;
+  }
+
+  .seleccionPersonas__dropdown span {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px;
+    display: inline-block;
+  }

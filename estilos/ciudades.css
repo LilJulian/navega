@@ -1,0 +1,172 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 20px;
+}
+
+.ciudades__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ciudades__titulo {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.ciudades__volver {
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.ciudades__volver:hover {
+  background-color: #2980b9;
+}
+
+.ciudades__formulario {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.ciudades__subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.form-ciudad__grupo {
+  margin-bottom: 15px;
+}
+
+.form-ciudad__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-ciudad__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-ciudad__btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-ciudad__btn:hover {
+  background-color: #219150;
+}
+
+.ciudades__tabla {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-ciudades {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabla-ciudades th,
+.tabla-ciudades td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.tabla-ciudades th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.tabla-ciudades__cuerpo tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-ciudades__cuerpo tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tabla-ciudades__boton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.tabla-ciudades__boton--eliminar {
+  background-color: #e74c3c;
+}
+
+.tabla-ciudades__boton--editar {
+  background-color: #f39c12;
+  margin-right: 5px;
+}
+
+.tabla-ciudades__boton--eliminar:hover {
+  background-color: #c0392b;
+}
+
+.tabla-ciudades__boton--editar:hover {
+  background-color: #d68910;
+}
+
+/* Estilo base para los botones */
+.tabla-acciones button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+/* Botón Editar */
+.tabla-acciones .btn-editar {
+  background-color: #3498db;
+}
+.tabla-acciones .btn-editar:hover {
+  background-color: #2980b9;
+}
+
+/* Botón Eliminar */
+.tabla-acciones .btn-eliminar {
+  background-color: #e74c3c;
+}
+.tabla-acciones .btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
