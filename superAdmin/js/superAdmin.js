@@ -1,3 +1,25 @@
+// Validar sesión activa
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+if (!usuario || usuario.id_usuario !== 1) {
+  window.location.href = "/logins/index.html";
+}
+
+// Mostrar mensaje de bienvenida al cargar la vista
+document.addEventListener("DOMContentLoaded", () => {
+  const mensaje = document.getElementById("mensajeBienvenida");
+  if (mensaje) {
+    mensaje.textContent = `Bienvenido, ${usuario.nombre_usuario}`;
+  }
+});
+
+// Función global para cerrar sesión
+function cerrarSesion() {
+  localStorage.removeItem("usuario");
+  window.location.href = "/logins/index.html";
+}
+
+
 const tablaAdmins = document.getElementById("tablaAdmins");
 const form = document.getElementById("formCrearAdmin");
 

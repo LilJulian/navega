@@ -7,9 +7,14 @@
 </head>
 <body class="superadmin">
 
-  <header class="superadmin__header">
-    <h1 class="superadmin__titulo">Gestión de Administradores</h1>
-  </header>
+<header class="superadmin__header">
+  <div class="superadmin__topbar">
+    <h2 id="mensajeBienvenida" class="superadmin__mensaje"></h2>
+    <button onclick="cerrarSesion()" class="superadmin__cerrar-sesion">Cerrar sesión</button>
+  </div>
+  <h1 class="superadmin__titulo">Gestión de Administradores</h1>
+</header>
+
 
   <main class="superadmin__main">
 
@@ -46,6 +51,6 @@
 
   </main>
 
-  <script src="superAdmin.js"></script>
+  <script src="../js/superAdmin.js"></script>
 </body>
 </html>

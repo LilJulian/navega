@@ -31,17 +31,13 @@ body{
   height: 10vw;
   border-bottom-left-radius: 50%;
   display: flex;
-  flex-direction: row;
-  position: relative;
-  padding : 0vw 19vw 0vw 10vw;
-  margin-bottom: 5vw;
-  justify-content: space-between;
-  
+  justify-content: center;
+  margin-bottom: 3vw;
 }
 
 .imagenLogo{
   padding-top: 0.9vw;
-  position: absolute;
+  /* position: absolute; */
   width: 18vw;
 }
 

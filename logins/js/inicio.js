@@ -20,14 +20,14 @@ document.querySelector(".formulario").addEventListener("submit", async function 
 
     // Guardar y redirigir
     localStorage.setItem("usuario", JSON.stringify(usuario));
-    if (usuario.id_rol === 1) {
-      window.location.href = "../vistaCliente.html";
-    } else if (usuario.id_rol === 2) {
-      window.location.href = "../vistaAdmin.html";
-      
-    }else if (usuario.id_usuario === 1) {
-      window.location.href = "../vistaSuperAdmin.html";
-    }
+if (usuario.id_usuario === 1) {
+  window.location.href = "/vistaSuperAdmin.html";
+} else if (usuario.id_rol === 1) {
+  window.location.href = "../vistaCliente.html";
+} else if (usuario.id_rol === 2) {
+  window.location.href = "../vistaAdmin.html";
+}
+
     else {
       Swal.fire({
         icon: "warning",

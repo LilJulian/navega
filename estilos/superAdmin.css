@@ -127,3 +127,31 @@ body.superadmin {
 .tabla-admins__cuerpo button:hover {
   background-color: #c0392b;
 }
+
+.superadmin__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.superadmin__mensaje {
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.superadmin__cerrar-sesion {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.superadmin__cerrar-sesion:hover {
+  background-color: #c0392b;
+}
