@@ -2,119 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Explora</title>
-  <link rel="fash icon" href="./images/logoExplora.png">
-  <link rel="stylesheet" href="../estilos/vistaCliente.css">
-  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <title>Viajes disponibles</title>
+  <link rel="stylesheet" href="/estilos/vistaCliente.css">
 </head>
-<body class="cuerpoVistaCliente">
-  <section class="encabezado">
-    <div class="encabezado__logo">
-      <img src="./images/logoExplora.png" alt="" class="imagenLogo imagenLogo--centrado">
-    </div>
-    <div class="encabezado__usuario">
-    </div>
-    <div class="encabezado__menu">
-      <a class="item__menu" href="#">RESERVAR</a>
-      <hr class="linea__menu">
-      <a class="item__menu" href="#">TUS RESERVAS</a>
-      <hr class="linea__menu">
-      <a class="item__menu" href="#">SOBRE NOSOTROS</a>
-    </div>
-  </section>
-  <section class="viaje">
-    <form class="opcionesViaje" method="get" novalidate>
-      <div class="idaVuelta">
-        <div class="idaVuelta__input">
-          <input class="chequeoIdaVuelta" type="checkbox" name="1" id="soloIda">
-          <label for="soloIda">Solo ida</label>
-        </div>
-        <hr class="linea__ida">
-        <div class="idaVuelta__input">
-          <input class="chequeoIdaVuelta" type="checkbox" name="2" id="vuelta">
-          <label for="vuelta">Ida y vuelta</label>
-        </div>
-      </div>
-      <div class="destinos">
-        <div class="origenDestino contenedor__viaje">
-          <div class="origen">
-            <button class="origenDestino__button">Origen</button>
-          </div>
-          <div class="origenDestino__separador">
-            <hr class="origenDestino__linea">
-            <i class='bx bx-swap-horizontal'></i> 
-            <hr class="origenDestino__linea">
-          </div>
-          <div class="destino">
-            <button class="origenDestino__button">Destino</button>
-          </div>
-      </div>
-<div class="idaVueltaCalendario contenedor__viaje">
-  <input type="text" id="fecha_ida" placeholder="Ida" required class="input__calendario">
-  <hr class="idaVueltaCalendario__linea">
-<input type="text" id="fecha_vuelta" placeholder="Vuelta" class="input__calendario">
-</div>
- 
-<div class="seleccionPersonas contenedor__viaje">
-  <button class="seleccionPersonas__button" id="btnTogglePersonas">
-    <i class='bx bx-user-plus'></i>
-    <span id="cantidadPersonas">1</span>
-    <i class='bx bx-chevron-down'></i>
-  </button>
-
-  <div class="seleccionPersonas__dropdown" id="dropdownPersonas">
-    <button id="btnRestar">-</button>
-    <span id="contador">1</span>
-    <button id="btnSumar">+</button>
+<body>
+  <nav class="menu-superior">
+  <div class="menu-usuario">
+    <span id="usuario-nombre">Bienvenido</span>
   </div>
-</div>
-      <div class="buscarViajes contenedor__viaje">
-        <button class="buscarViajes__button">Buscar</button>
-      </div>
-      </div>
-    </form>
-    <script src="../js/reservas.js"></script>
-  </section>
-  <section class="complementos">
-    <h1 class="tituloTravesiaCom">Compementa tu travesia</h1>
-    <div class="complementos__info">
-      <div class="hospedaje complementos__contenedor">
-        <div class="complementoTitulo">
-          <p>HOSPEDAJE</p>
-        </div>
-        <div class="complementoImagen__contenedor">
-          <img src="./images/hotel.svg" alt="" class="complementos__imagen">
-        </div>
-        <div class="complementoLink">
-          <a class="complementoLink__texto" href="#">Click aqui para encontrar hoteles: <u>www.hotel.co</u></a>
-        </div>
-      </div>
-      <div class="vehiculos complementos__contenedor">
-        <div class="complementoTitulo">
-          <p>ALQUILER DE VEHICULOS</p>
-        </div>
-        <div class="complementoImagen__contenedor">
-          <img src="./images/carro.svg" alt="" class="complementos__imagen">
-        </div>
-        <div class="complementoLink">
-          <a class="complementoLink__texto" href="#">Click aqui para encontrar autos: <u>www.autos.co</u></a>
-        </div>
-      </div>
-      <div class="tour complementos__contenedor">
-        <div class="complementoTitulo">
-          <p>TOURS</p>
-        </div>
-        <div class="complementoImagen__contenedor">
-          <img src="./images/puente.svg" alt="" class="complementos__imagen">
-        </div>
-        <div class="complementoLink">
-          <a class="complementoLink__texto" href="#">Click aqui para encontrar tours: <u>www.tours.co</u></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="menu-opciones">
+    <a href="reservasCliente.html">Mis Reservas</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="/logins/html/index.html" id="cerrarSesion">Cerrar Sesión</a>
+  </div>
+</nav>
+
+  <h1>Viajes disponibles</h1>
+  <div id="mensaje-vacio" style="display: none;">No hay viajes disponibles.</div>
+  <div id="contenedor-viajes"></div>
+
+  <script src="../js/vistaCliente.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Viajes</title>
+  <link rel="stylesheet" href="/estilos/viaje.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="vistaAdmin.html">
+      <button style="width: auto;">🏠 Volver a Inicio</button>
+    </a>
+  </div>
+
+  <h1>Registrar un Viaje</h1>
+  <form id="formViaje">
+    <label>Transporte:</label>
+    <select id="id_transporte" required></select>
+
+    <label>Ciudad Origen:</label>
+    <select id="id_ciudad_origen" required></select>
+
+    <label>Ciudad Destino:</label>
+    <select id="id_ciudad_destino" required></select>
+
+    <label>Fecha Salida:</label>
+    <input type="datetime-local" id="fecha_salida" required />
+
+    <label>Fecha Llegada:</label>
+    <input type="datetime-local" id="fecha_llegada" required />
+
+    <label>Precio Base:</label>
+    <input type="number" step="0.01" id="precio_base" required />
+
+    <button type="submit">Registrar Viaje</button>
+  </form>
+
+  <h2>Lista de Viajes Registrados</h2>
+  <table id="tablaViajes">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Transporte</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Salida</th>
+        <th>Llegada</th>
+        <th>Precio</th>
+        <th>Asientos</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="../js/viajes.js"></script>
+</body>
+
+</html>

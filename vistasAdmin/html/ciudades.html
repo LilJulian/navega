@@ -5,31 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gestión de Ciudades</title>
   <link rel="stylesheet" href="/estilos/ciudades.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="ciudades">
   <header class="ciudades__header">
     <h1 class="ciudades__titulo">Gestión de Ciudades</h1>
-    <a href="/vistaAdmin.html" class="ciudades__volver">← Volver</a>
+    <a href="./vistaAdmin.html" class="ciudades__volver">Volver al Menú</a>
   </header>
 
   <section class="ciudades__formulario">
     <h2 class="ciudades__subtitulo">Agregar Nueva Ciudad</h2>
-<form id="formCiudad" class="form-ciudad">
-  <div class="form-ciudad__grupo">
-    <label for="nombreCiudad" class="form-ciudad__label">Nombre Ciudad</label>
-    <input type="text" id="nombreCiudad" name="nombre_ciudad" required class="form-ciudad__input" />
-  </div>
-  <div class="form-ciudad__grupo">
-    <label for="pais" class="form-ciudad__label">País</label>
-    <input type="text" id="pais" name="pais" required class="form-ciudad__input" />
-  </div>
-  <div class="form-ciudad__grupo">
-    <label for="codigoPostal" class="form-ciudad__label">Código Postal</label>
-    <input type="text" id="codigoPostal" name="codigo_postal" class="form-ciudad__input" />
-  </div>
-  <button type="submit" class="form-ciudad__btn">Guardar Ciudad</button>
-</form>
-
+    <form id="formCiudad" class="form-ciudad">
+      <div class="form-ciudad__grupo">
+        <label for="nombreCiudad" class="form-ciudad__label">Nombre Ciudad</label>
+        <input type="text" id="nombreCiudad" name="nombre_ciudad" required class="form-ciudad__input" />
+      </div>
+      <div class="form-ciudad__grupo">
+        <label for="pais" class="form-ciudad__label">País</label>
+        <input type="text" id="pais" name="pais" required class="form-ciudad__input" />
+      </div>
+      <div class="form-ciudad__grupo">
+        <label for="codigoPostal" class="form-ciudad__label">Código Postal</label>
+        <input type="text" id="codigoPostal" name="codigo_postal" class="form-ciudad__input" />
+      </div>
+      <div class="form-ciudad__grupo">
+        <label><input type="checkbox" id="puerto" /> Tiene puerto</label>
+        <label><input type="checkbox" id="aeropuerto" /> Tiene aeropuerto</label>
+        <label><input type="checkbox" id="terminal" /> Tiene terminal terrestre</label>
+      </div>
+      <button type="submit" class="form-ciudad__btn">Guardar Ciudad</button>
+    </form>
   </section>
 
   <section class="ciudades__tabla">
@@ -41,6 +46,9 @@
           <th>Nombre</th>
           <th>País</th>
           <th>Código Postal</th>
+          <th>Puerto</th>
+          <th>Aeropuerto</th>
+          <th>Terminal</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -49,6 +57,7 @@
       </tbody>
     </table>
   </section>
+
   <script src="../js/ciudades.js"></script>
 </body>
 </html>

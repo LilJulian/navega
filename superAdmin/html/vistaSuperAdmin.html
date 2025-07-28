@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Vista SuperAdmin - Gestión de Administradores</title>
   <link rel="stylesheet" href="/estilos/superAdmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="superadmin">
 
@@ -21,7 +22,7 @@
     <!-- Bloque: formulario -->
     <section class="formulario-admin">
       <h2 class="formulario-admin__titulo">Crear nuevo administrador</h2>
-      <form id="formCrearAdmin" class="formulario-admin__form">
+      <form id="formCrearAdmin" class="formulario-admin__form" novalidate>
         <input type="text" id="nombre" class="formulario-admin__input" placeholder="Nombre completo" required>
         <input type="email" id="correo" class="formulario-admin__input" placeholder="Correo electrónico" required>
         <input type="password" id="contrasena" class="formulario-admin__input" placeholder="Contraseña" required>

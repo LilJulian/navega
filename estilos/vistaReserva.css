@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.reserva-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-viaje {
+  margin-bottom: 20px;
+}
+
+.viaje-info h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.viaje-info p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.acciones {
+  text-align: center;
+}
+
+.btn-reservar {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-reservar:hover {
+  background-color: #218838;
+}
+
+.mensaje-error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formulario-reserva {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-reserva h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-group input:read-only {
+  background-color: #e9ecef;
+  color: #495057;
+}
+

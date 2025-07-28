@@ -2,36 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gestión de Transporte</title>
+  <title>Gestión de Transportes</title>
   <link rel="stylesheet" href="/estilos/transportes.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <button class="btn-volver" onclick="window.location.href='vistaAdmin.html'">Volver al Menú</button>
 
-  <h1>Gestión de Medios de Transporte</h1>
+  <h1>Gestión de Transportes</h1>
 
-  <!-- Formulario -->
+  <div class="botones-filtro">
+    <button onclick="cargarTransportes()">Ver Todos</button>
+    <button onclick="filtrarPorEstado(1)">Ver Activos</button>
+    <button onclick="filtrarPorEstado(0)">Ver Inactivos</button>
+  </div>
+
   <form id="formTransporte">
-    <input type="text" id="tipo" placeholder="Tipo de transporte" required>
-    <button type="submit" id="btnGuardar">Registrar</button>
+    <input type="hidden" id="id_transporte">
+
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="matricula" placeholder="Matrícula" maxlength="8" required>
+    <input type="number" id="asientos_totales" placeholder="Asientos Totales" required>
+    <textarea id="descripcion" placeholder="Descripción"></textarea>
+
+    <label for="estado">Estado:</label>
+    <select id="estado" required>
+      <option value="1">Activo</option>
+      <option value="0">Inactivo</option>
+    </select>
+
+    <label for="tipo">Tipo de Transporte:</label>
+    <select id="tipo" required>
+      <option value="">Seleccione tipo</option>
+      <option value="1">Terrestre</option>
+      <option value="2">Acuático</option>
+      <option value="3">Aéreo</option>
+    </select>
+
+    <button type="submit">Guardar</button>
   </form>
-  <div style="text-align: center; margin-bottom: 1rem;">
-  <button onclick="cargarTransportes()">Ver transportes activos</button>
-  <button onclick="cargarInactivos()">Ver transportes inactivos</button>
-</div>
 
-
-  <!-- Tabla -->
   <table>
     <thead>
       <tr>
         <th>ID</th>
+        <th>Nombre</th>
+        <th>Matrícula</th>
+        <th>Asientos</th>
+        <th>Descripción</th>
+        <th>Estado</th>
         <th>Tipo</th>
         <th>Acciones</th>
       </tr>
     </thead>
-    <tbody id="tablaTransporte">
-      <!-- JS inserta aquí -->
+    <tbody id="tablaTransportes">
+      <!-- Datos dinámicos -->
     </tbody>
   </table>
 

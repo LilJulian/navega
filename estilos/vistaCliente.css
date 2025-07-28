@@ -1,397 +1,144 @@
-@import url('./login.css');
-
-.cuerpoVistaCliente{
-  display: flex;
-  flex-direction: column;
-}
-
-.viaje{
-  margin-bottom: 5vw;
-}
-
-.encabezado__menu{
-  position: absolute;
-  top: 42%;
-  right: 6%;
-  display: flex;
-  flex-direction: row;
-  gap: 2vw;
-  /* font-size: 1.4vw; */
-  
-}
-
-.item__menu{
-  color: var(--verdeOscuro);
-  text-decoration: none;
-  font-size: 1.4vw;
-}
-
-.item__menu:hover{
-  color: rgb(2, 48, 2);
-  font-size: 1.9vw;
-  
-}
-
-.linea__menu{
-  width: 0.2vw;
-  border: none;
-  background-color: var(--negroLetra);
-}
-
-.opcionesViaje{
-  width: 65vw;
-  height: 15vw;
-  background-color: var(--verdeOscuro);
-  margin: auto ;
-  border-radius: 2vw;
-  display: grid;
-  grid-template-rows: 6vw 1fr;
-  grid-template-areas: 'idaVuelta'
-                       'destinos';
-                       ;
-
-}
-
-.idaVuelta{
-  grid-area: 'idaVuelta';
-  background-color: var(--verdeClaro);
-  border-radius: 2vw 2vw 0 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2vw;
-  align-items: center;
-  font-size: 2vw;
-
-}
-
-.idaVuelta__input{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.destinos{
-  grid-area: 'destinos';
-  display: flex;
-  justify-content: center;
-  /* margin-top: 0.7vw; */
-}
-
-.linea__ida{
-  width: 0.2vw;
-  border: none;
-  background-color: var(--negroLetra);
-  height: 2vw;
-}
-
-/* .chequeoIdaVuelta{
-  margin:0  1.3vw 0 1.3vw;
-  width: 1.2vw;
-} */
-
-
-input[type="checkbox"]{
-  display: none;
-}
-input[type="checkbox"] + label:before{
-  content: "";
-  margin:0.6vw  1.3vw 0 1.3vw;
-  width: 1.2vw;
-  height: 1.2vw;
-  float: left;
-	border: 0.2vw solid black;
-	background: var(--verdeClaro);
-}
-
-input[type="checkbox"]:checked + label:after{
-  content: "";
-  width: 1vw;
-  height: 0.5vw;
-  border: 4px solid #0fbf12;
-  float: left;
-  margin-left: -2.7vw;
-  border-right: 0;
-  border-top: 0;
-  margin-top: 0.9vw;
-  transform: rotate(-55deg);
-}
-
-
-.destinos{
-  padding: 1.3vw;
-  align-content: center;
-  display: flex;
-  gap: 1vw;
-}
-.origenDestino{
-  color: var(--negroLetra);
-  /* justify-content: space-evenly; */
-  padding: 1.8vw 0;
-  
-}
-
-.contenedor__viaje{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70%;
-  width: 28%;
-  background-color: var(--verdeClaro);
-  border-radius: 1.2vw;
-  border: solid 0.3vw var(--verdeBorde);
-}
-
-.origenDestino__button, .idaVueltaCalendario__button, .seleccionPersonas__button, .buscarViajes__button{
-  border: none;
-  background-color: transparent;
-  font-size: 1.7vw;
-  font-weight: bold;
-  align-self: center;
-}
-
-.origenDestino__separador{
-  display: flex;
-  flex-direction: column;
-  gap: 0.4vw;
-  align-items: center;
-}
-
-.bx-swap-horizontal{
-  font-size: 2vw;
-}
-
-.origenDestino__linea{
-  border: none;
-  background-color: var(--verdeBorde); 
-  height: 2vw;
-  transform: rotate(90deg);
-  height: 0.2vw;
-  width: 0.5vw;
-}
-
-.idaVueltaCalendario{
-  /* position: relative; */
-  justify-content: start;
-  gap: 0.4vw;
-  padding-left: 1vw;
-  
-}
-
-.idaVueltaCalendario__linea{
-  border: none;
-  background-color: var(--verdeBorde); 
-  height: 2vw;
-  transform: rotate(90deg);
-  height: 0.3vw;
-}
-
-
-.bx-calendar-alt{
-  color: var(--verdeOscuro);
-  font-size: 2.4vw;
-  position: absolute;
-  margin-left: 1vw;
-  
-}
-
-
-
-.bx-user-plus{
-  font-size: 2vw;
-  color: var(--verdeOscuro);
-}
-
-
-
-.bx-chevron-down{
-
-  font-size: 2.7vw;
-}
-
-
-.buscarViajes{
-  border-radius: 5vw;
-  font-size: 2vw;
-  width: 8vw;
-  background-color: black;
-  
-}
-
-.buscarViajes__button{
-  color: aliceblue;
-}
-
-
-.complementos{
-  width: 100%;
-  height: 40vw;
-  display: grid;
-  grid-template-rows: 6vw 1fr;
-  grid-template-columns: 1fr;
-  padding: 2vw;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 20px;
   text-align: center;
 }
 
-.tituloTravesiaCom{
-  font-size: 3vw;
+h1 {
+  color: #00796b;
+  margin-bottom: 30px;
 }
 
-.complementos__info{
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-areas: 'hospedaje' 'vehiculos' 'tour';
-  gap: 2vw;
-}
-
-.hospedaje{
-  grid-area: 'hospedaje';
-}
-
-.vehiculos{
-  grid-area: 'vehiculos';
-}
-
-.tour{
-  grid-area: 'tour';
-}
-
-.complementos__contenedor{
-  display: flex;
-  background-color: var(--verdeClaro);
-  flex-direction: column;
-  border-radius: 2vw;
-  margin-top: 2vw;
-}
-
-.complementoTitulo{
-  padding: 1vw;
-  height: 30%;
-  width: 100%;
-  background-color: var(--verdeOscuro);
-  color: white;
-  font-size: 2.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#mensaje-vacio {
+  color: #d32f2f;
   font-weight: bold;
-  margin-bottom: 3vw;
-  border-radius: 2vw 2vw 0 0;
 }
 
-.complementos__imagen{
-  width: 29vw;
-  height: 10vw;
+#contenedor-viajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
 }
 
-.complementoImagen__contenedor{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.6vw;
-}
-
-.complementoLink__texto{
-  text-decoration: none;
-  color: var(--negroLetra);
-}
-
-.idaVuelta__input, .origenDestino, .idaVueltaCalendario, .seleccionPersonas__button, .buscarViajes  :hover{
+.viaje-card {
+  background-color: #ffffff;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s;
   cursor: pointer;
 }
 
-#fecha_ida,
-#fecha_vuelta {
-  background-color: var(--verdeClaro);
-  border: 0.2vw solid var(--verdeBorde);
-  border-radius: 1vw;
-  font-size: 1.3vw;
-  font-family: 'Arial', sans-serif;
-  color: #073d07;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  width: 7vw;
-  height: 3vw;
-  outline: none;
-  transition: all 0.3s ease;
+.viaje-card:hover {
+  transform: scale(1.03);
+  background-color: #e0f2f1;
 }
 
-#fecha_ida:focus,
-#fecha_vuelta:focus {
-  box-shadow: 0 0 0.5vw 0.2vw #53a653;
-  background-color: #d0f5d0;
+.viaje-card h3 {
+  color: #00695c;
 }
 
-/* Estilo al calendario (popup de Flatpickr) */
-.flatpickr-calendar {
-  font-size: 1vw;
-  border-radius: 1vw;
-  background-color: #f6fff5;
-  border: 0.2vw solid var(--verdeBorde);
+.viaje-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-
-.idaVueltaCalendario input::placeholder {
-  color: black;
-  opacity: 1;          /* asegúrate que no se vea desvanecido */
+.viaje-card button:hover {
+  background-color: #004d40;
 }
 
-.input__calendario{
-  padding-left: 0.5vw;
+.menu-superior {
+  background-color: #004d40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  border-bottom: 4px solid #00796b;
+  margin-bottom: 20px;
 }
 
-  .seleccionPersonas {
-    position: relative;
-    display: inline-block;
-    width: 12vw;
-  }
+.menu-superior a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
 
-  .seleccionPersonas__button {
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-    font-weight: bold;
-    color: var(--verdeOscuro);
-  }
+.menu-superior a:hover {
+  color: #b2dfdb;
+}
 
-  .seleccionPersonas__dropdown {
-    display: none;
-    position: absolute;
-    top: 110%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    z-index: 10;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    min-width: 140px;
-    text-align: center;
-  }
+.menu-usuario {
+  font-size: 16px;
+}
 
-  .seleccionPersonas__dropdown button {
-    background-color: var(--verdeBorde);
-    border: none;
-    color: white;
-    padding: 6px 12px;
-    font-size: 18px;
-    margin: 0 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
+.menu-opciones {
+  display: flex;
+  align-items: center;
+}
 
-  .seleccionPersonas__dropdown button:hover {
-    background-color: #388e3c;
-  }
+.reserva-card {
+  background-color: #ffffff;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  margin: 10px auto;
+  max-width: 400px;
+}
+.reserva-card h3 {
+  color: #00695c;
+}
 
-  .seleccionPersonas__dropdown span {
-    font-size: 18px;
-    font-weight: bold;
-    min-width: 20px;
-    display: inline-block;
-  }
+/* === Boletos Reserva === */
+
+#contenedor-boletos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+  margin-top: 20px;
+}
+
+.boleto-card {
+  background-color: #ffffff;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.boleto-card:hover {
+  transform: scale(1.03);
+  background-color: #e0f2f1;
+}
+
+.boleto-card h4 {
+  margin-top: 0;
+  color: #00695c;
+}
+
+.boleto-card p {
+  margin: 6px 0;
+}
+
+#mensaje-vacio {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-top: 30px;
+}

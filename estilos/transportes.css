@@ -1,112 +1,170 @@
 /* Reset básico */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Estilo general */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
+  background-color: #f7f9fc;
   color: #333;
-  padding: 2rem;
+  padding: 20px;
 }
 
-/* Título */
-h1 {
+/* Título principal */
+h1, .ciudades__titulo {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2rem;
   color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Botón volver al menú */
+.btn-volver, .ciudades__volver {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-volver:hover, .ciudades__volver:hover {
+  background-color: #2980b9;
 }
 
 /* Formulario */
-form {
-  background-color: #fff;
-  max-width: 500px;
-  margin: 0 auto 2rem auto;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+form, .ciudades__formulario {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
-form input {
-  flex: 1 1 60%;
-  padding: 0.75rem;
-  font-size: 1rem;
+form input,
+form select,
+form textarea,
+.form-ciudad__input {
+  flex: 1 1 250px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-form input:focus {
-  outline: none;
-  border-color: #3498db;
-  background-color: #eef7ff;
+/* Etiquetas del formulario */
+.form-ciudad__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  width: 100%;
 }
 
-form button {
-  flex: 1 1 30%;
-  background-color: #2ecc71;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  padding: 0.75rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-form button:hover {
+/* Botón del formulario */
+form button,
+.form-ciudad__btn {
   background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+.form-ciudad__btn:hover {
+  background-color: #219150;
 }
 
 /* Tabla */
-table {
+table,
+.tabla-ciudades {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
   border-radius: 8px;
   overflow: hidden;
 }
 
-thead {
-  background-color: #2980b9;
-  color: white;
-}
-
-th, td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
+th, td,
+.tabla-ciudades th,
+.tabla-ciudades td {
+  padding: 12px;
+  border: 1px solid #ccc;
   text-align: left;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+th,
+.tabla-ciudades th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
 }
 
-tr:hover {
+/* Filas alternas y hover */
+.tabla-ciudades__cuerpo tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.tabla-ciudades__cuerpo tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Botones de acción */
-button {
-  background-color: #e74c3c;
-  color: white;
+/* Acciones dentro de la tabla */
+.tabla-acciones button {
+  padding: 6px 12px;
+  margin: 2px;
   border: none;
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+  color: #fff;
 }
 
-button:hover {
+/* Botón Editar */
+.tabla-acciones .btn-editar {
+  background-color: #3498db;
+}
+.tabla-acciones .btn-editar:hover {
+  background-color: #2980b9;
+}
+
+/* Botón Eliminar */
+.tabla-acciones .btn-eliminar {
+  background-color: #e74c3c;
+}
+.tabla-acciones .btn-eliminar:hover {
   background-color: #c0392b;
+}
+
+/* Botones de filtros si los usas */
+.botones-filtro {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.botones-filtro button {
+  background-color: #2196F3;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones-filtro button:hover {
+  background-color: #0b7dda;
 }

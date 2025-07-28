@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Panel Administrador</title>
-  <link rel="stylesheet" href="/estilos/vistaAdmin.css" />
+  <link rel="stylesheet" href="../../estilos/vistaAdmin.css" />
+  <link rel="fash icon" href="../../images/logoExplora.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="navbar">
-    <div class="navbar__logo"><img class="navbar__logoImage" src="./images/logoExplora.png" alt=""></div>
+    <div class="navbar__logo"><img class="navbar__logoImage" src="../../images/logoExplora.png" alt=""></div>
     <div class="navbar__actions">
-      <a href="perfil.html" class="navbar__btn"> Perfil</a>
-      <a href="index.html" class="navbar__btn navbar__btn--logout">Cerrar sesión</a>
+      <a href="../../logins/html/index.html" class="navbar__btn navbar__btn--logout">Cerrar sesión</a>
     </div>
   </header>
 
@@ -21,9 +21,17 @@
     <section class="dashboard__opciones">
       <a href="/vistasAdmin/html/ciudades.html" class="dashboard__card">🌍 Ciudades</a>
       <a href="/vistasAdmin/html/transportes.html" class="dashboard__card">🚌 Transportes</a>
-      <a href="viajes.html" class="dashboard__card">✈️ Viajes</a>
+      <a href="/vistasAdmin/html/viajes.html" class="dashboard__card">✈️ Viajes</a>
     </section>
   </main>
+  <script>
+  // Evitar navegación hacia atrás después de cerrar sesión
+  if (performance.navigation.type === 2) {
+    // Si el usuario intenta volver con la flecha ←, se le redirige al login
+    location.replace('../../logins/html/index.html');
+  }
+</script>
+
 </body>
 </html>
 

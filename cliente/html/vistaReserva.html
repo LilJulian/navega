@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalles del Viaje</title>
+  <link rel="stylesheet" href="/estilos/vistaReserva.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="reserva-container">
+    <h1>Detalles del viaje</h1>
+    <p id="usuario-info" style="font-weight: bold; margin-bottom: 1em;"></p>
+    
+    <div id="detalle-viaje" class="detalle-viaje"></div>
+
+    <form id="formReserva" class="formulario-reserva">
+      <h2>Reservar viaje</h2>
+
+            <div class="form-group">
+        <label for="tipoReserva">Tipo de Reserva</label>
+        <select id="tipoReserva" name="tipoReserva" required>
+          <option value="IDA">Solo ida</option>
+          <option value="IDA_Y_VUELTA">Ida y vuelta</option>
+        </select>
+      </div>
+
+  <div class="form-group" id="grupoFechaVuelta">
+  <label for="fechaVuelta">Fecha de vuelta</label>
+  <input type="date" id="fechaVuelta" name="fechaVuelta" />
+</div>
+
+
+
+      <div class="form-group">
+        <label for="cantidadPersonas">Cantidad de personas</label>
+        <input type="number" id="cantidadPersonas" name="cantidadPersonas" min="1" required />
+      </div>
+
+
+      <div id="pasajerosAdicionales" class="form-group pasajeros-adicionales"></div>
+
+      <div class="acciones">
+        <button type="submit" class="btn-reservar">Confirmar reserva</button>
+      </div>
+    </form>
+
+    <div id="mensaje-error" class="mensaje-error" style="display: none;"></div>
+  </div>
+
+  <script src="../js/vistaReserva.js"></script>
+</body>
+</html>
